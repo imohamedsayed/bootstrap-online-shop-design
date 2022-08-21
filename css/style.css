@@ -1,0 +1,167 @@
+:root {
+  --main--color: #8f61db;
+}
+* {
+  box-sizing: border-box;
+}
+nav i {
+  padding: 5px 10px;
+  background-color: rgb(231 230 230);
+  border-radius: 50%;
+  color: black;
+}
+.header {
+  width: 100%;
+  height: 80vh;
+  background: url("../images/slider_1.jpg");
+}
+.header .jumbotron {
+  width: 60%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .jumbotron h1 {
+  font-size: 80px;
+}
+.header .jumbotron .btn {
+  width: 20%;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .header .jumbotron {
+    width: 100%;
+  }
+  .header .jumbotron h1 {
+    font-size: 40px;
+  }
+  .header .jumbotron .btn {
+    width: 80%;
+  }
+}
+.category > div {
+  width: 30%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category > div:first-of-type {
+  background: url("../images/banner_1.jpg") top center;
+  background-size: cover;
+}
+.category > div:nth-of-type(2) {
+  background: url("../images/banner_2.jpg") top center;
+  background-size: cover;
+}
+.category > div:last-of-type {
+  background: url("../images/banner_3.jpg") top center;
+  background-size: cover;
+}
+.row {
+  justify-content: space-between;
+}
+.category > div > div {
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: rgba(243, 243, 243, 0.5);
+}
+.newarrivals {
+  margin-top: 10%;
+}
+.special-span {
+  display: block;
+  width: 60px;
+  border-bottom: 5px solid red;
+  margin: 0 auto;
+}
+.row:nth-of-type(2) {
+  justify-content: flex-start;
+}
+.row:nth-of-type(2) .card {
+  border: none !important;
+  margin-bottom: 2%;
+}
+
+.row:nth-of-type(2) .card .btn {
+  display: block;
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+.row:nth-of-type(2) .card:hover .btn {
+  opacity: 1;
+}
+
+.offer {
+  width: 100%;
+  min-height: 600px;
+  background-color: #e4e4e4;
+  background-image: url(../images/deal_ofthe_week.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.offer .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clock.row {
+  margin-top: 10%;
+  justify-content: space-around;
+  align-items: center;
+}
+.clock > div {
+  background-color: #fff;
+  width: 20%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50%;
+}
+.slider {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.latest-blogs .row > div {
+  height: 200px;
+  padding: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.latest-blogs .row > div:first-of-type {
+  background: url("../images/blog_1.jpg") top center;
+  background-size: cover;
+}
+
+.latest-blogs .row > div:nth-of-type(2) {
+  background: url("../images/blog_2.jpg") top center;
+  background-size: cover;
+}
+
+.latest-blogs .row > div:last-of-type {
+  background: url("../images/blog_3.jpg") top center;
+  background-size: cover;
+}
+.blog {
+  background-color: rgba(255, 255, 255, 0.841);
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.latest-blogs .row > div:hover .blog {
+  opacity: 1;
+}
